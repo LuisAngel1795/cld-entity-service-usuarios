@@ -1,0 +1,49 @@
+#GitIgnore
+# Gradle
+.gradle/
+build/
+
+# Eclipse
+.project
+.classpath
+.settings/
+bin/
+
+# IntelliJ
+.idea
+.idea/
+*.ipr
+*.iml
+*.iws
+
+# NetBeans
+nb-configuration.xml
+
+# Visual Studio Code
+.vscode
+.factorypath
+
+# OSX
+.DS_Store
+
+# Vim
+*.swp
+*.swo
+
+# patch
+*.orig
+*.rej
+
+# Local environment
+.env
+jboss.server.base.dir_IS_UNDEFINED/
+
+*.hprof
+.gradle/
+gradle/
+gradlew
+gradlew.bat
+HELP.md
+build/
+*.zip
+
