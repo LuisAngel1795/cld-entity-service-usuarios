@@ -38,18 +38,21 @@ public class Usuario implements Serializable {
         - Inactivo
         - Suspendido
         - Pendiente de activacion*/
-    @Column(name = "activo")
-    private String activo;
+    @Column(name = "estatus")
+    private String estatus;
 
 
     /*username*/
-    @Column(name = "usuario")
-    private String usuario;
+    @Column(name = "correo_electronico")
+    private String correoElectronico;
 
     /*user password*/
     @Column(name = "contrasena")
     private String contrasena;
 
     @ManyToMany(fetch = FetchType.LAZY)
+    @JoinTable(name = "roles_usuarios",
+            joinColumns = @JoinColumn(name = "id_usuario"),
+            inverseJoinColumns =@JoinColumn(name = "id_rol"))
     private List<Rol> roles;
 }

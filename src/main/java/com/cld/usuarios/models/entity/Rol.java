@@ -28,8 +28,8 @@ public class Rol implements Serializable {
     @Column(name="descripcion")
     private String descripcion;
 
-    @ManyToMany(fetch = FetchType.LAZY, mappedBy = "roles")
-    private List<Usuario> usuarios;
+    /*@ManyToMany(fetch = FetchType.LAZY, mappedBy = "roles")
+    private List<Usuario> usuarios;*/
 
 
 }
