@@ -26,6 +26,6 @@ public class UsuarioDto{
         - Pendiente de activacion*/
        private String estatus;
         /*username*/
-        private String correoElectronico;
-        private List<Rol> roles;
+        private String email;
+        private List<RolDto> roles;
  }
