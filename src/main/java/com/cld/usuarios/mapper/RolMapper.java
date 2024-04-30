@@ -12,11 +12,11 @@ import java.util.List;
 
 @Mapper
 public interface RolMapper {
-    @Mapping(source = "descripcion", target = "descripciondelRol")
-    @Named("toDto")
+
     RolDto toDto(Rol rol);
+    List<RolDto> toDtoList(List<Rol> roles);
 
-
-    List<RolDto> todoList(List<Rol> roles);
+    Rol toEntity(RolDto rol);
+    List<Rol> toEntityList(List<RolDto> roles);
 
 }

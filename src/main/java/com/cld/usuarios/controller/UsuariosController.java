@@ -1,7 +1,9 @@
 package com.cld.usuarios.controller;
 
+import com.cld.usuarios.models.GenericResponse;
 import com.cld.usuarios.models.dto.UsuarioDto;
 import com.cld.usuarios.models.entity.Usuario;
+import com.cld.usuarios.services.IUsuarioService;
 import com.cld.usuarios.services.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,10 +19,10 @@ import static com.cld.usuarios.constants.UsuariosConstants.BASEPATH;
 public class UsuariosController {
 
     @Autowired
-    private UsuarioService service;
+    private IUsuarioService service;
 
     @GetMapping
-    public List<UsuarioDto> getUsuarios(){
+    public GenericResponse<List<UsuarioDto>> getUsuarios(){
         return service.finallUsers();
     }
 }

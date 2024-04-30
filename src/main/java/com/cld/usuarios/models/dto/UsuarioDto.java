@@ -6,7 +6,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.Date;
+import java.sql.Date;
 import java.util.List;
 
 
@@ -26,6 +26,6 @@ public class UsuarioDto{
         - Pendiente de activacion*/
        private String estatus;
         /*username*/
-        private String email;
+        private String correoElectronico;
         private List<RolDto> roles;
  }

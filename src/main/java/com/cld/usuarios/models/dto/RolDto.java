@@ -12,7 +12,7 @@ import lombok.Setter;
 @AllArgsConstructor
 public class RolDto{
        private Long id;
-        private String descripciondelRol;
+        private String descripcion;
 
 
 }

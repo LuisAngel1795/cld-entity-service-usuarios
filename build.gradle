@@ -32,6 +32,9 @@ dependencies {
 	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.springframework.security:spring-security-test'
+	implementation 'net.logstash.logback:logstash-logback-encoder:6.4'
+	implementation group: 'org.apache.commons', name: 'commons-lang3', version: '3.5'
+	implementation group: 'javax.validation', name: 'validation-api', version: '2.0.1.Final'
 	implementation 'org.mapstruct:mapstruct:1.5.4.Final'
 	annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.4.Final'
 }
