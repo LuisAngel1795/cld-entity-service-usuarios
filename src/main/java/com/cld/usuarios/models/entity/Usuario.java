@@ -22,7 +22,7 @@ public class Usuario implements Serializable {
 
     /*user id*/
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO, generator="usuarios_id_seq")
     private Long id;
 
     /*person id*/

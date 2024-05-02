@@ -15,9 +15,10 @@ import java.util.List;
 public interface UsuarioMapper {
     UsuarioMapper mapper = Mappers.getMapper(UsuarioMapper.class);
 
+    @Mapping(target = "contrasena", ignore=true)
     UsuarioDto usuarioToUsuarioDto(Usuario usuario);
 
 
-    @Mapping(target = "contrasena", ignore = true)
+
     Usuario usuarioDtoToUsuario(UsuarioDto usuario);
 }

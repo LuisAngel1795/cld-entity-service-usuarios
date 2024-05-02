@@ -6,5 +6,5 @@ import org.springframework.data.repository.CrudRepository;
 import java.util.List;
 
 public interface UsuarioDao extends CrudRepository<Usuario, Long> {
-    public List<Usuario>  findAll();
+    List<Usuario>  findAll();
 }

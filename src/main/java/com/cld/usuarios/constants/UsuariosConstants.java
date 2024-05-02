@@ -12,4 +12,6 @@ public class UsuariosConstants {
     public static final String MALFORMED_FIELD = "El campo %s esta mal formado.";
     public static final String NOT_FOUND= "No se encontraron resultados";
     public static final String REQUIRED_FIELD_MESSAGE = "Campo Requerido:";
+    public static final String EL_CAMPO_MAL_FORMATO = "El campo %s esta mal formado.";
+    public static final String SERVER_ERROR_MESSAGE = "Error en el servidor.";
 }

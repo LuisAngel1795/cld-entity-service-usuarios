@@ -1,7 +1,6 @@
 package com.cld.usuarios.utils;
 
 import org.slf4j.MDC;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import java.sql.Date;
@@ -19,13 +18,6 @@ import java.util.UUID;
 @Component
 public class Util {
 	/**
-	 * El Id del mso.
-	 */
-// Id MSO
-	@Value("${CLD_MSO_ID}")
-	public String idMSO;
-
-	/**
 	 * Get folio en string.
 	 *
 	 * @return folio
@@ -34,7 +26,6 @@ public class Util {
 		String currentFolio = UUID.randomUUID().toString();
 		MDC.put("currentFolio", currentFolio);
 		return currentFolio;
-
 	}
 
 
@@ -47,5 +38,4 @@ public class Util {
 		Date date = Date.valueOf(LocalDate.now());
 		return date;
 	}
-
 }

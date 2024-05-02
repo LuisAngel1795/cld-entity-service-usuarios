@@ -1,16 +1,16 @@
 package com.cld.usuarios.controller;
 
-import com.cld.usuarios.models.GenericResponse;
-import com.cld.usuarios.models.dto.UsuarioDto;
-import com.cld.usuarios.models.entity.Usuario;
-import com.cld.usuarios.services.IUsuarioService;
-import com.cld.usuarios.services.UsuarioService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
+import com.cld.usuarios.models.UsuariosPostResponse;
+import com.cld.usuarios.models.dto.UsuarioDto;
+import com.cld.usuarios.services.IUsuarioService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
+import com.cld.usuarios.models.UsuariosGetResponse;
+
+
+import javax.validation.Valid;
 
 import static com.cld.usuarios.constants.UsuariosConstants.BASEPATH;
 
@@ -22,7 +22,13 @@ public class UsuariosController {
     private IUsuarioService service;
 
     @GetMapping
-    public GenericResponse<List<UsuarioDto>> getUsuarios(){
-        return service.finallUsers();
+    public UsuariosGetResponse getUsuarios(){
+        return service.findAllUsers();
+    }
+
+    @PostMapping
+    @ResponseStatus(HttpStatus.CREATED)
+    public UsuariosPostResponse postUsuarios(@RequestBody UsuarioDto usuario){
+        return service.createOne(usuario);
     }
 }
