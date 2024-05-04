@@ -14,4 +14,7 @@ public class UsuariosConstants {
     public static final String REQUIRED_FIELD_MESSAGE = "Campo Requerido:";
     public static final String EL_CAMPO_MAL_FORMATO = "El campo %s esta mal formado.";
     public static final String SERVER_ERROR_MESSAGE = "Error en el servidor.";
+
+
+    public static final String LOGIC_DELETE = "EliminadoLogico";
 }

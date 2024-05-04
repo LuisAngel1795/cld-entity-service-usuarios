@@ -206,7 +206,6 @@ public class GlobalExceptionHandler {
     ApiError apiError = new ApiError();
     apiError.setCodigo(e.getOption().getInfoExepcion().getCodigo());
     apiError.setMensaje(e.getOption().getInfoExepcion().getMensaje());
-    apiError.setInfo(e.getOption().getInfoExepcion().getInfo());
     apiError.setDetalles(e.getBody().getDetalles());
     return apiError;
   }

@@ -15,7 +15,7 @@ public class UsuariosException extends RuntimeException {
 	public UsuariosException(List<String> detalles, EExceptionMessage option) {
 		this.option = option;
 		ExepcionInfo info = option.getInfoExepcion();
-		this.body = new ApiError(info.getCodigo(), info.getMensaje(), info.getInfo(),
+		this.body = new ApiError(info.getCodigo(), info.getMensaje(),
 				detalles);
 	}
 

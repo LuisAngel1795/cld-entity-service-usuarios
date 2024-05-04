@@ -6,5 +6,8 @@ import org.springframework.data.repository.CrudRepository;
 import java.util.List;
 
 public interface UsuarioDao extends CrudRepository<Usuario, Long> {
-    List<Usuario>  findAll();
+
+    List<Usuario>  findByEstatusNotEliminadoLogico();
+
+
 }

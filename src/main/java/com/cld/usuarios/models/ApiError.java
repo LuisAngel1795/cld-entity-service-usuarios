@@ -17,7 +17,6 @@ public class ApiError implements Serializable {
   private String codigo;
   private String mensaje;
   private String folio;
-  private String info;
   private List<String> detalles;
 
   public ApiError() {
@@ -25,12 +24,11 @@ public class ApiError implements Serializable {
     this.folio = MDC.get("currentFolio").replace("-", "");
   }
 
-  public ApiError(String codigo, String mensaje, String info, List<String> detalles) {
+  public ApiError(String codigo, String mensaje, List<String> detalles) {
     super();
     this.codigo = codigo;
     this.mensaje = mensaje;
     this.folio = MDC.get("currentFolio");
-    this.info = info;
     this.detalles = Collections.unmodifiableList(detalles);
   }
 
