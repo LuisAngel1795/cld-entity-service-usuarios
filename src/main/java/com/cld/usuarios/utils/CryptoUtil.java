@@ -1,6 +1,5 @@
 package com.cld.usuarios.utils;
 
-import com.cld.usuarios.models.Accesos;
 import com.gs.cipher.algorithms.rsa.RsaCipherTool;
 import com.gs.cipher.exception.CryptoException;
 import org.slf4j.Logger;
@@ -14,7 +13,7 @@ import javax.crypto.Cipher;
 public class CryptoUtil {
     private static final Logger LOGGER = LoggerFactory.getLogger(CryptoUtil.class);
 
-    public void decryptRSA(Accesos accesos, Object body) {
+    public void decryptAES(Accesos accesos, Object body) {
         try {
             RsaCipherTool rsaEncrypt = new RsaCipherTool(accesos.getAccesoPrivado(), Cipher.DECRYPT_MODE);
             rsaEncrypt.decrypt(body);
@@ -25,7 +24,7 @@ public class CryptoUtil {
     }
 
 
-    public void encryptRSA(Accesos accesos, Object body) {
+    public void encryptAES(Accesos accesos, Object body) {
         try {
             RsaCipherTool rsaEncrypt = new RsaCipherTool(accesos.getAccesoPublico(), Cipher.ENCRYPT_MODE);
             rsaEncrypt.encrypt(body);

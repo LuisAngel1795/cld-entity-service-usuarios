@@ -1,7 +1,7 @@
 package com.cld.usuarios.constants;
 
 public class UsuariosConstants {
-    public static final String BASEPATH = "/service/usuarios";
+    public static final String BASEPATH = "cld/entity-service/usuarios";
 
 
     public static final String SUCCESSFUL_REQUEST_MESSAGE = "Operaci??n Exitosa";
