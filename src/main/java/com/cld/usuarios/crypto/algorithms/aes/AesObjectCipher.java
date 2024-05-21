@@ -50,7 +50,7 @@ public class AesObjectCipher implements ObjectCipher {
   private byte[] iv;
   // aesKey
   private SecretKeySpec aesKey;
-  // operation
+  // operationt statusg
   private Function<byte[], byte[]> operation;
   // inputMapper
   private Function<String, byte[]> inputMapper;
