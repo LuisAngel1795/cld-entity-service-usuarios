@@ -35,7 +35,7 @@ public class UsuarioServiceImpl implements IUsuarioService {
     public UsuariosGetResponse findAllUsers() {
         List<UsuarioDto> listaUsuarios = new ArrayList<>();
         try {
-            listaUsuarios = dao.findByEstatusNotEliminadoLogico().stream().map(
+            listaUsuarios = dao.findByEstatusNot("EliminadoLogico").stream().map(
                     UsuarioMapper.mapper::usuarioToUsuarioDto
             ).collect(Collectors.toList());
 
