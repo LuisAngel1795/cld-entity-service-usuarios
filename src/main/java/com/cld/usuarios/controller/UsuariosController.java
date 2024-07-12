@@ -18,6 +18,7 @@ import static com.cld.usuarios.constants.UsuariosConstants.BASEPATH;
 
 @RestController
 @RequestMapping(BASEPATH)
+@CrossOrigin(origins = "http://localhost:3000")
 public class UsuariosController {
 
     @Autowired
