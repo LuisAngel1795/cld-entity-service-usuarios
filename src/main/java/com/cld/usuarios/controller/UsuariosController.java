@@ -24,7 +24,7 @@ public class UsuariosController {
     @Autowired
     private IUsuarioService service;
 
-    @GetMapping("/recurso/usuarios")
+    @GetMapping
     public UsuariosGetResponse getUsuarios(){
         return service.findAllUsers();
     }
