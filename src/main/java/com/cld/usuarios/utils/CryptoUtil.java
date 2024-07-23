@@ -1,4 +1,3 @@
-/*
 package com.cld.usuarios.utils;
 
 import com.gs.cipher.algorithms.rsa.RsaCipherTool;
@@ -8,7 +7,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 import javax.crypto.Cipher;
-
 
 @Component
 public class CryptoUtil {
@@ -24,7 +22,6 @@ public class CryptoUtil {
         }
     }
 
-
     public void encryptAES(Accesos accesos, Object body) {
         try {
             RsaCipherTool rsaEncrypt = new RsaCipherTool(accesos.getAccesoPublico(), Cipher.ENCRYPT_MODE);
@@ -37,4 +34,3 @@ public class CryptoUtil {
 
     }
 }
-*/
